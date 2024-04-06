@@ -85,3 +85,254 @@ body {
   font-size: var(--headlineBig);
   color: var(--primaryTextColor);
 }
+
+
+
+/* header */
+header{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+}
+.Lround {
+	width: 65px;
+	height: 65px;
+	background: linear-gradient(#FF4E50,#F9D423);
+	border-radius: 50%;
+	margin: 10px;
+}
+nav {
+	width: 100%;
+	text-align: center;
+	padding-top: 16px;
+	opacity: 0.75;
+}
+nav ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+nav ul li{
+	display: inline-block;
+}
+nav ul li a{
+	display: inline-block;
+	padding: 10px 15px;
+	font-size: 20px;
+	color: #fff;
+}
+.HIcon{
+	width: 100%;
+}
+.Hwrap {
+	width: 200px;
+	height: 90px;
+	background: #fff;
+	float: right;
+	padding: 10px;
+	text-align: right;
+	clip-path: circle(46.5% at 100% 0);
+	cursor: pointer;
+}
+.Hwrap img {
+	width: 38px;
+	object-fit: cover;
+}
+
+/* container */
+.container{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 6% 94%;
+}
+.sideline {
+	width: 100%;
+	display: flex;
+    align-items: flex-end;
+}
+.line {
+	display: flex;
+	padding: 0px 10px;
+	overflow: hidden;
+}
+.line span{
+	width: 5px;
+	height: 200px;
+	background: #fff;
+	display: inline-block;
+	margin: 5px;
+}
+.lone {
+	display: block;
+}
+.ltwo {
+	display: block;
+	margin-top: 50px;
+}
+.lthree{
+	display: block;
+	margin-top: 100px;
+}
+
+
+/* container Header */
+/* .heading img {
+	width:55%;
+} */
+.up {
+	text-align: center;
+	width: 100%;
+	height: 75vh;
+	overflow: hidden;
+	background: url('../../public/img/1.svg') no-repeat;
+	background-position: 45%;
+	background-size: 65%;
+	display: grid;
+	place-items: center;
+	place-content: center;
+	padding-right: 36px;
+}
+.Htag{
+	position: relative;
+}
+.target{
+	position: absolute;
+	width: 47% !important;
+  top: -18%;
+  right: -46%;
+}
+
+.task{
+	position: absolute;
+	width: 34% !important;
+	top: -8%;
+	left: 22%;
+}
+
+.ads{
+	position: absolute;
+	width: 97% !important;
+	top: 41%;
+	left: 68%;
+  }
+
+.rocket{
+	position: absolute;
+	position: absolute;
+	width: 64% !important;
+  top: 49%;
+  right: 48%;
+  }
+
+
+
+.up h1{
+	
+	font-size: 150px;
+	color: #fff;
+	mix-blend-mode: difference;
+	text-shadow:2px 1px 1px #FFFFFF,
+				2px 1px 3px #FFFFFF,
+				2px -2px 1px #FFFFFF,
+				-2px 1px 1px #FFFFFF,
+				2px 2px 3px #000,
+				-2px 5px 4px #000;
+    font-weight: 400;
+}
+.up h1:last-child {
+	transform: translate(20%, -45%);
+}
+.up span {
+	letter-spacing: -0.15em;
+}
+.down {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 60% 40%;
+}
+.paraG p {
+	color: white;
+	
+}
+.solink ul li {
+	display: inline-block;
+	padding: 0px 8px;
+	overflow: hidden;
+}
+.solink a {
+	color: white;
+	display: inline-block;
+	font-size: 14px;
+	position:relative;
+	padding:5px 0px;
+	cursor:pointer;
+}
+.solink a::after{
+	content:"";
+	width:0%;
+	height:2px;
+    background:#fff;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	transition:.5s;
+
+}
+.solink a:hover::after{
+	width:100%;
+}
+
+.solink {
+	padding-top: 70px;
+	font-family: LEMON MILK;
+
+}
+
+
+   /* Extra small devices (phones, 600px and down) */
+   @media only screen and (max-width: 600px) {
+	.up {
+		height: 300px; 
+		background-size: 138%;
+	  }
+	
+	  .up h1 {
+		font-size: 5rem;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.up {
+		height: 300px; 
+		background-size: 75%;
+	  }
+	
+	  .up h1 {
+		font-size: 6rem;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.up {
+		height: 300px;
+		background-size: 60%;
+	  }
+	
+	  .up h1 {
+		font-size: 6rem;
+	}
+}
+
+/*Large devices (laptops/desktops, 992px and up)*/
+@media only screen and (min-width: 992px) {
+	.up {
+		height: 100%;
+		background-size: 57%;
+	  }
+	
+	  .up h1 {
+		font-size: 10rem;
+	}
+}
