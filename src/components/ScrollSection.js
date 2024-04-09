@@ -21,8 +21,8 @@ function ScrollSection() {
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
-          start: "top ",
-          end: "2000 ",
+          start: "top  top",
+          end: "2000 top",
           scrub: 0.6,
           pin: true,
         },

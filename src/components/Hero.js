@@ -59,7 +59,7 @@ function Hero() {
   }, []);
 
   return (
-    <>
+    <div className="hero">
       <div className="box"> box</div>
       <header>
         <div className="logo">
@@ -157,7 +157,7 @@ function Hero() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
