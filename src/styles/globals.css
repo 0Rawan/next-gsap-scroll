@@ -22,7 +22,7 @@ body,
 body {
   background-color: var(--backgroundColor);
 }
-
+/* hero page styling */ 
 .hero__header {
   height: 100vh;
   display: flex;
@@ -374,3 +374,43 @@ nav ul li a{
 		font-size: 10rem;
 	}
 }
+
+
+
+/* working libraires page */ 
+
+.working-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.working-ul li {
+  display: block;
+  font-family: "Belleza", sans-serif;
+  position: relative;
+  font-size: 80px;
+  text-align: center;
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+  margin-bottom: 80px;
+  z-index: 1;
+  padding: 20px;
+
+}
+
+.item img {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  z-index: -10;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*******************************/
