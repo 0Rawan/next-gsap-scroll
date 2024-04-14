@@ -3,6 +3,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Hero from "./Hero";
 import WorkingLibraries from "./WorkingLibraries";
+import Education from "./Education";
+import Work from "./Work";
+import Skills from "./Skills";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,12 +44,12 @@ function Panels() {
       //   });
       // }, app);
       // return () => ctx.revert();
-
+      let ctx = gsap.context(() => {
       const tl = gsap.timeline();
-      tl.from(orangie.current, { xPercent: -100 })
-        .from(bluie.current, { xPercent: 100 })
-        .from(pinkie.current, { yPercent: -100 });
-   
+      tl.from(".education", { xPercent: -100})
+        .from(".work", { xPercent: 100})
+        .from(".skills", { yPercent: -100});
+ 
 
     ScrollTrigger.create({
       animation: tl,
@@ -56,14 +59,20 @@ function Panels() {
       scrub: true,
       pin: true,
       anticipatePin: 1,
-    });
-}, []);
+    })
+}, app);
+return () => ctx.revert();
+},
+    []
+  );
+
   return (
     <div className="panels-container" ref={app}>
-      <section className="panel">one</section>
-      <section className="panel animate-panel orangie" ref={orangie}>TWO</section>
-      <section className="panel animate-panel bluie" ref={bluie}>THREE</section>
-      <section className="panel animate-panel pinkie" ref={pinkie}>FOUR</section>
+      {/* <section className="panel">one</section> */}
+      {/* <section className="panel animate-panel red">ONE</section> */}
+      <section className="panel animate-panel education"><Education/></section>
+      <section className="panel animate-panel work"><Work/></section>
+      <section className="panel animate-panel skills"><Skills/></section>
     </div>
   );
 }
