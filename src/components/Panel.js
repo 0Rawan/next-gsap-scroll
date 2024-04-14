@@ -12,13 +12,19 @@ function Panels() {
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
       const panels = self.selector(".animate-panel");
-      gsap.set(panels, { yPercent: 100, opacity: 1 });
+      gsap.set(panels, { xPercent: 100, opacity: 1 });
       const tl = gsap.timeline();
       panels.forEach((panel, i) => {
+        i % 2 == 0 ? 
         tl.to(panel, {
-          yPercent: 0,
+          xPercent: 0,
           ease: "none"
-        });
+        }) :
+        tl.to(panel, {
+            xPercent: -100,
+            ease: "none"
+          })
+        ;
       });
       ScrollTrigger.create({
         animation: tl,
@@ -44,10 +50,10 @@ function Panels() {
       <section className="panel">
       one
       </section>
-      <section className="panel animate-panel red">ONE</section>
-      <section className="panel animate-panel orange">TWO</section>
-      <section className="panel animate-panel purple">THREE</section>
-      <section className="panel animate-panel green">FOUR</section>
+      <section className="panel animate-panel pirplie">ONE</section>
+      <section className="panel animate-panel orangie">TWO</section>
+      <section className="panel animate-panel bluie">THREE</section>
+      <section className="panel animate-panel pinkie">FOUR</section>
     </div>
   );
 }

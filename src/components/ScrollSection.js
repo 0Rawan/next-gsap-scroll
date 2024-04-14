@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Work from "./Work";
+import Education from "./Education";
 
 
 function ScrollSection() {
@@ -44,10 +46,10 @@ function ScrollSection() {
       <div ref={triggerRef}>
         <div ref={sectionRef} className="scroll-section-inner">
           <div className="scroll-section">
-            <h3>Section 1</h3>
+            <Work/>
           </div>
           <div className="scroll-section">
-            <h3>Section 2</h3>
+          <Education/>
           </div>
           <div className="scroll-section">
             <h3>Section 3</h3>
