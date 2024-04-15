@@ -5,6 +5,7 @@ import WorkingLibraries from "@/components/WorkingLibraries";
 import Panels from "@/components/Panel";
 import Skills from "@/components/Skills";
 import About from "@/components/About";
+import Grid from "@/components/Grid";
 export default function Home() {
   return (
     <>
@@ -13,7 +14,7 @@ export default function Home() {
       <Panels />
       <Skills />
       {/* <ScrollSection /> */}
-
+      <Grid/>
       <Footer />
     </>
   );
