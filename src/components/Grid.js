@@ -22,7 +22,8 @@ useEffect(() => {
 
 useLayoutEffect(() => {
   const state = Flip.getState(gridElementsRef.current);
-
+  if (active)
+  active.dataset.grid = "featured"
   Flip.from(state, {
     duration: 0.85,
     absolute: true,
@@ -36,14 +37,34 @@ useLayoutEffect(() => {
 
 
 const changeGrid = (e) => {
+  const state = Flip.getState(gridElementsRef.current);
   const el = e.target
   if (el === active) return;
 
   const activeIndex = tiles.findIndex((tile) => tile === active);
+  const targetIndex = tiles.findIndex((tile) => tile === el);
   const newTiles = [...tiles]
   newTiles[activeIndex].dataset.grid = el.dataset.grid
-  
-  el.dataset.grid = "featured";
+   gsap.to(tiles[targetIndex].dataset, {
+   grid: 'featured',
+   duration: 0.85,
+   absolute: true,
+   ease: 'power3.inOut',
+ });
+
+ gsap.to(tiles[activeIndex].dataset, {
+  grid: el.dataset.grid,
+  duration: 0.85,
+  absolute: true,
+  ease: 'power3.inOut',
+});
+
+ Flip.from(state, {
+  duration: 0.85,
+  absolute: true,
+  ease: "power3.inOut"
+});
+
 
   setActive(el);
   setTiles(newTiles)
@@ -53,26 +74,6 @@ const changeGrid = (e) => {
 
 
 
-
-//  gsap.to(tiles[1].dataset, {
-//    grid: el.dataset.grid,
-//    duration: 0.85,
-//    absolute: true,
-//    ease: 'power3.inOut',
-//  });
-
-//  gsap.to(tiles[targetIndex].dataset, {
-//    grid: 'featured',
-//    duration: 0.85,
-//    absolute: true,
-//    ease: 'power3.inOut',
-//  });
-
-//  Flip.from(state, {
-//    duration: 0.85,
-//    absolute: true,
-//    ease: 'power3.inOut',
-//  });
 
 const setRefs = (e, i) => {
   const { current } = gridElementsRef;
