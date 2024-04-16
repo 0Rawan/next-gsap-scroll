@@ -2,7 +2,7 @@ import React from 'react'
 import { gsap } from "gsap";
 
 
-function HoverTextImage( {children}) {
+function HoverTextImage( {children, image}) {
   return (
     <span className="item"  onMouseEnter={(e) => gsap.to(e.target.firstChild, { autoAlpha: 1 })}
     onMouseLeave={(e) => gsap.to(e.target.firstChild, { autoAlpha: 0 })}
@@ -15,7 +15,7 @@ function HoverTextImage( {children}) {
         }
     }
     >
-      <img src="https://ct112013.files.wordpress.com/2013/07/pasteeel.jpg" />
+      <img src={image} />
        {children}
     </span>
   )

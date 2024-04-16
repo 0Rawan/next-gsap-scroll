@@ -60,7 +60,6 @@ function Hero() {
 
   return (
     <div className="hero">
-      <div className="box"> box</div>
       <header>
         <div className="logo">
           <div className="Lround" ref={boxRef}></div>
@@ -135,23 +134,20 @@ function Hero() {
               <div className="solink">
                 <ul>
                   <li>
-                    <a href="#">Facebook</a>
+                    <a href="https://github.com/0Rawan">Github</a>
                   </li>
                   <li>
-                    <a href="#">Facebook</a>
+                    <a href="https://www.linkedin.com/in/rawan-mustafa-087725140/">Linkedin</a>
                   </li>
                   <li>
-                    <a href="#">Facebook</a>
+                    <a href="mailto:00rawan.kamal@gmail.com">Email</a>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="paraG" ref={paraGRef}>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                repellendus nobis a debitis et minus harum est. Similique
-                explicabo rerum voluptatibus deserunt corporis, sunt sequi quia
-                aliquid libero, culpa blanditiis!
+               Computer engineer focusing on web development, and I have experience with the React, Next Express js, and Laravel.
               </p>
             </div>
           </div>
