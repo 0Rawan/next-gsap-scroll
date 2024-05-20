@@ -37,7 +37,7 @@ function Work() {
             >
               <i
                 className="fas fa-code-branch"
-                style={{ color: "#bd8fe4;" }}
+                style={{ color: "#bd8fe4" }}
               ></i>
             </div>
             <h4 className="title">Version Control</h4>
@@ -59,7 +59,7 @@ function Work() {
               data-aos="flip-up"
               data-aos-delay="400"
             >
-              <i className="fas fa-book" style={{ color: "#F3A712;" }}></i>
+              <i className="fas fa-book" style={{ color: "#F3A712" }}></i>
             </div>
             <h4 className="title">Adaptable</h4>
             <p className="description">
@@ -79,7 +79,7 @@ function Work() {
               data-aos="flip-up"
               data-aos-delay="400"
             >
-              <i className="fas fa-stopwatch" style={{ color: "#61e786;" }}></i>
+              <i className="fas fa-stopwatch" style={{ color: "#61e786" }}></i>
             </div>
             <h4 className="title"><small>Time Management</small></h4>
             <p className="description">

@@ -30,7 +30,6 @@ useLayoutEffect(() => {
     ease: "power3.inOut"
   });
   
-  console.log('here')
 }, [tiles]);
 
 
@@ -38,7 +37,13 @@ useLayoutEffect(() => {
 
 const changeGrid = (e) => {
   const state = Flip.getState(gridElementsRef.current);
-  const el = e.target
+
+ let el = e.target.parentElement
+  if (el.dataset.grid  === undefined)
+     el = e.target
+  
+  console.log(e.target)
+  console.log(el.dataset.grid)
   if (el === active) return;
 
   const activeIndex = tiles.findIndex((tile) => tile === active);
@@ -84,16 +89,23 @@ const setRefs = (e, i) => {
     <div id="grid-layout" ref={gridRef} >
   <div className="grid">
     <div className="grid-tile tile-1 clickable-false" ref={el=> setRefs(el, 0)} onClick={(e) =>changeGrid(e)}  data-grid="tile-1">
-      <h2>Tile 1</h2>
+    tile1
     </div>
     <div className="grid-tile tile-2 clickable-true" ref={el=> setRefs(el, 1)} onClick={(e) =>changeGrid(e)}  data-grid="tile-2">
-      <h2>Tile 2</h2>
+    <img src='./img/kunfit.jpeg'/>
+    <div className='overlay'></div>
+      
     </div>
     <div className="grid-tile tile-3 clickable-true" ref={el=> setRefs(el, 2)} onClick={(e) =>changeGrid(e)}  data-grid="tile-3">
-      <h2>Tile 3</h2>
+    <img src='./img/sarahah.png'/>
+    <div className='overlay'>
+      <a>code</a>
+      <a>Live</a>
     </div>
+    </div>
+     
     <div className="grid-tile tile-4 clickable-true" ref={el=> setRefs(el, 3)} onClick={(e) =>changeGrid(e)}  data-grid="tile-4">
-      <h2>Tile 4</h2>
+      <img src='./img/metrak.png'/>
     </div>
     <div className="grid-tile tile-5 clickable-true" ref={el=> setRefs(el, 4)} onClick={(e) =>changeGrid(e)}  data-grid="tile-5">
       <h2>Tile 5</h2>

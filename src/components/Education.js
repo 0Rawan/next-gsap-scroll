@@ -2,7 +2,7 @@ import React from "react";
 
 function Education() {
   return (
-    <div className="timeline-container">
+    <div className="timeline-container ">
       <h1 className="project-name">RESPONSIVE TIMELINE</h1>
       <div id="timeline">
         <div className="timeline-item">
@@ -30,15 +30,13 @@ function Education() {
               />
             </svg>
           </div>
-          <div className="timeline-content">
-            <h2>LOREM IPSUM DOLOR</h2>
+          <div className="timeline-content blackglass">
+            <h2 className="bluie">Computer Enginnering</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque,
-              facilis quo maiores magnam modi ab libero praesentium blanditiis.
+              5 year program including engineering, design, and problem solving
+              topics. Graduated at the top of class
             </p>
-            <a href="#" className="btn">
-              button
-            </a>
+           
           </div>
         </div>
 
@@ -70,16 +68,14 @@ function Education() {
               </g>
             </svg>
           </div>
-          <div className="timeline-content right">
-            <h2>LOREM IPSUM DOLOR</h2>
+          <div className="timeline-content right blackglass">
+            <h2 className="purpleglass">Full-stack Bootcamp</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque,
-              facilis quo. Maiores magnam modi ab libero praesentium blanditiis
-              consequatur aspernatur accusantium maxime molestiae sunt ipsa.
+              Front End Web Development HTML, CSS, React and Next
+              Back end Web Development Node and express
+              5-month intense web development program run by Re:Coded
             </p>
-            <a href="#" className="btn">
-              button
-            </a>
+           
           </div>
         </div>
 
@@ -108,17 +104,15 @@ function Education() {
               />
             </svg>
           </div>
-          <div className="timeline-content">
+          {/* <div className="timeline-content">
             <h2>LOREM IPSUM DOLOR</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque,
               facilis quo. Maiores magnam modi ab libero praesentium blanditiis
               consequatur aspernatur accusantium maxime molestiae sunt ipsa.
             </p>
-            <a href="#" className="btn">
-              button
-            </a>
-          </div>
+           
+          </div> */}
         </div>
       </div>
     </div>

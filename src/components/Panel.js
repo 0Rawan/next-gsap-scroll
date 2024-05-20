@@ -68,7 +68,11 @@ return () => ctx.revert();
 
   return (
     <div className="panels-container" ref={app}>
-      {/* <section className="panel">one</section> */}
+      <section className="panel first">
+        <h1>Get to know me better</h1>
+      <div class="mouse"></div>
+<p class="text">Scroll</p>
+      </section>
       {/* <section className="panel animate-panel red">ONE</section> */}
       <section className="panel animate-panel education"><Education/></section>
       <section className="panel animate-panel work"><Work/></section>
