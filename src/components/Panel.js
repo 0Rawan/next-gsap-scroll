@@ -46,9 +46,9 @@ function Panels() {
       // return () => ctx.revert();
       let ctx = gsap.context(() => {
       const tl = gsap.timeline();
-      tl.from(".education", { xPercent: -100})
+      tl.from(".skills", { xPercent: -100})
         .from(".work", { xPercent: 100})
-        .from(".skills", { yPercent: -100});
+        // .from(".education", { yPercent: -100});
  
 
     ScrollTrigger.create({
@@ -74,9 +74,10 @@ return () => ctx.revert();
 <p class="text">Scroll</p>
       </section>
       {/* <section className="panel animate-panel red">ONE</section> */}
-      <section className="panel animate-panel education"><Education/></section>
-      <section className="panel animate-panel work"><Work/></section>
       <section className="panel animate-panel skills"><Skills/></section>
+      <section className="panel animate-panel work"><Work/></section>
+      {/* <section className="panel animate-panel education"><Education/></section> */}
+
     </div>
   );
 }

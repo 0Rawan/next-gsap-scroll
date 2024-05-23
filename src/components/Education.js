@@ -3,7 +3,9 @@ import React from "react";
 function Education() {
   return (
     <div className="timeline-container ">
-      <h1 className="project-name">RESPONSIVE TIMELINE</h1>
+       <div className="work-container">
+        <p className="work-title">  My Education 🎓</p>
+      </div>
       <div id="timeline">
         <div className="timeline-item">
           <div className="timeline-icon">

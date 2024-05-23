@@ -62,15 +62,18 @@ function Hero() {
     <div className="hero">
       <header>
         <div className="logo">
-          <div className="Lround" ref={boxRef}></div>
+          <div className="Lround" ref={boxRef}>
+          <img src="./img/Rawan-logo.png" className="logo" />
+
+          </div>
         </div>
         <nav>
           <ul>
             <li>
-              <a href="#">Projects</a>
+              <a href="#Projects">Projects</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#footer">Contact</a>
             </li>
           </ul>
         </nav>
