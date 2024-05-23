@@ -17,7 +17,7 @@ function Work() {
           >
             <h4 className="title">Clean Code</h4>
             <p className="description">
-            I am committed to writing clean and efficient code that doesn `&apos;`t only
+            I am committed to writing clean and efficient code that doesn&apos;t only
             save my time in debugging my code and pushing updates, also
             helps fellow developers to collaborate with me easily.
             </p>
@@ -54,8 +54,8 @@ function Work() {
           >
             <h4 className="title"><small>Time Management</small></h4>
             <p className="description">
-            To be honest, I have done Most projects for myself, I `&apos;`ve also worked in teams,
-            and Recoded Bootcamp taught me a lot about time management, I `&apos;`m
+            To be honest, I have done Most projects for myself, I&apos;ve also worked in teams,
+            and Recoded Bootcamp taught me a lot about time management, I&apos;m
             looking forward to getting more projects.
             </p>
           </div>
