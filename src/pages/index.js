@@ -6,6 +6,7 @@ import Panels from "@/components/Panel";
 import Skills from "@/components/Skills";
 import About from "@/components/About";
 import Grid from "@/components/Grid";
+import Experience from "@/components/Experience";
 export default function Home() {
   return (
     <>
@@ -14,7 +15,8 @@ export default function Home() {
       <Panels />
       {/* <Skills /> */}
       {/* <ScrollSection /> */}
-      <Grid/>
+      {/* <Grid/> */}
+      <Experience/>
       <Footer />
     </>
   );

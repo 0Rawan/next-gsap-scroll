@@ -95,7 +95,7 @@ body {
   position: relative;
 }
 
-.scroll-section {
+fplogo.scroll-section {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -1246,7 +1246,7 @@ nav ul li a{
   /** ------------------------------------------------------
 ------------------- grid classes --------------------
 --------------------------------------------------------- */
-#grid-layout {
+/* #grid-layout {
 	height: 100vh;
 	width: 100vw;
 	margin: 0;
@@ -1316,8 +1316,9 @@ nav ul li a{
 	padding: 0.5em;
 	overflow: hidden;
 	/*transition: 0.6s ease-out all;*/
-	background-color: darkseagreen;
+	/* background-color: darkseagreen; */
   
+	/*
 	h2 {
 	  font-size: 1vw;
 	  line-height: 1em;
@@ -1339,7 +1340,7 @@ nav ul li a{
 	bottom: 0; 
 	background: rgb(0, 0, 0);
 	background: rgba(0, 0, 0, 0.5); /* Black see-through */
-	color: #f1f1f1; 
+	/*color: #f1f1f1; 
 	width: 100%;
 	height: 100%;
 	transition: .5s ease;
@@ -1358,13 +1359,196 @@ nav ul li a{
   }
   .overlay a{
 	background-color: #4CAF50; /* Green */
-	color: white;
+	/*color: white;
 	padding: 2rem;
 	margin-left: 2rem;
   }
   [data-grid="featured"]:hover .overlay {
 	opacity: 1;
+  } */
+
+/** ------------------------------------------------------
+------------------- work -------------------------------
+--------------------------------------------------------- */
+
+.work{
+	height: 100vh; 
+	color: wheat;
+	background: #0a192f;
+}
+
+.work-container {
+	max-width: 1000px;
+	margin: auto;
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
   }
+  
+  
+  /* Skills title */
+  
+  .work-title {
+	font-size: 4rem;
+	font-weight: bold;
+	display: inline;
+	border-bottom: 4px solid #e53e3e;
+	margin: 0;
+  
+  }
+  
+  
+  /* Skills description */
+  
+  .work-description {
+	margin: 16px 0;
+	font-weight: 600;
+  font-size: 1.5em;
+  
+  }
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+  }
+  
+  .col {
+	flex: 1; /* Default to equal width columns */
+	padding-right: 15px;
+	padding-left: 15px;
+  }
+a:hover {
+	text-decoration: none;
+}
+
+.np {
+	padding: 0px;
+}
+
+.featuredPropBox {}
+
+.featuredPropBox ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: outside none none;
+	padding: 0;
+}
+
+.featuredPropBox ul li {
+	background-color: #eeeeee;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display: block;
+	height: 250px;
+	margin: 5px;
+	width: 32%;
+	position: relative;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+
+.featuredPropBox ul li:after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(22, 22, 22, 0.6);
+	transition: all 0.3s;
+}
+
+.featuredPropBox ul li:nth-child(1) {
+	background-image: url('../../public/assets/kunfit.png');
+}
+
+.featuredPropBox ul li:nth-child(2) {
+	background-image: url('../../public/assets/metrak.png');
+}
+
+.featuredPropBox ul li:nth-child(3) {
+	background-image: url('../../public/assets/NotFlix.png');
+}
+
+.featuredPropBox ul li:nth-child(4) {
+	background-image: url('../../public/assets/sarahah.png');
+}
+
+.featuredPropBox ul li:nth-child(5) {
+	background-image: url('../../public/assets/Party-Station.png');
+}
+.featuredPropBox ul li:nth-child(6) {
+	background-image: url('../../public/assets/Antique.png');
+}
+
+.featuredPropBox ul li:nth-child(7) {
+	background-image: url('https://i.ibb.co/hLcmWbT/15646.jpg');
+}
+
+.featuredPropBox ul li:nth-child(8) {
+	background-image: url('https://i.ibb.co/89P5rTs/15678.jpg');
+}
+
+.featuredPropBox ul li:nth-child(9) {
+	background-image: url('https://i.ibb.co/RhZgpSG/20845.jpg');
+}
+
+.featuredPropBox ul li .fplogo {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	transition: all 0.3s;
+	color: white;
+	font-size: 3.6rem;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+}
+
+.featuredPropBox ul li .fplogo img {
+	width: 100%;
+}
+
+.featuredPropBox ul li .fptext {
+	display: none;
+	font-size: 16px;
+	left: 50%;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 0.3s ease 0s;
+	width: 65%;
+	z-index: 1;
+}
+
+.featuredPropBox ul li .fptext p {
+	color: #fff;
+	margin: 0px;
+}
+
+.featuredPropBox ul li:hover {
+	box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2) inset;
+}
+
+.featuredPropBox ul li:hover:after {
+	background-color: rgba(22, 22, 22, 0.3);
+}
+
+.featuredPropBox ul li:hover .fplogo {
+	display: none;
+}
+
+.featuredPropBox ul li:hover .fptext {
+	display: block;
+}
 /** ------------------------------------------------------
 ------------------- color bg classes --------------------
 --------------------------------------------------------- */
