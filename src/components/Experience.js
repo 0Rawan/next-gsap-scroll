@@ -11,7 +11,7 @@ const Experience = () => {
       <div className="work-container">
         <p className="work-title">Projects</p>
         <p className="work-description">
-          // These are the Projects that I've built
+          These are the Projects that I `&apos;`ve built
         </p>
       </div>
       {/* Container */}
@@ -40,8 +40,8 @@ const Experience = () => {
                   <div class="fplogo">Metrak</div>
                   <div class="fptext">
                     <p>
-                      MERN stack-powered web service project! We've built a
-                      feature-rich web application that caters to our customers'
+                      MERN stack-powered web service project! We `&apos;`ve built a
+                      feature-rich web application that caters to our customers `&apos;`
                       needs using the modern and robust MERN stack.
                     </p>
                   </div>
@@ -54,7 +54,7 @@ const Experience = () => {
                   <div class="fptext">
                     <p>
                       This project is a one week team project for our Re:Coded
-                      Fullstack Web Developement Bootcamp. It's a movie browsing
+                      Fullstack Web Developement Bootcamp. It `&apos;`s a movie browsing
                       website where you can search & browse for movies, actors,
                       genres, and showcasing the latest and most popular movies.
                       The website design is sleek, intuitive, and responsive,
@@ -83,7 +83,7 @@ const Experience = () => {
                   <div class="fplogo">Partystation</div>
                   <div class="fptext">
                     <p>
-                      This porject I build While I was trainee in company, it's
+                      This porject I build While I was trainee in company, it `&apos;`s
                       for startup company thad needed a store and landing page
                       connected to a dashboard, built with laravel.
                     </p>

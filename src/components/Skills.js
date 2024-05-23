@@ -7,7 +7,7 @@ const Skills = () => {
       <div className='skills-container'>
           <div>
               <p className='skills-title'>Skills</p>
-              <p className='skills-description'>// These are the technologies I've worked with</p>
+              <p className='skills-description'>  These are the technologies I `&apos;`ve worked with</p>
           </div>
 
           <div className='skills-grid'>
