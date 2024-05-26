@@ -87,6 +87,7 @@ body {
 
 .heading{
 	overflow: hidden;
+	height: fit-content;
 }
 
 .scroll-section-outer {
@@ -124,7 +125,7 @@ body {
 
 .footer span {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: var(--headlineBig);
+  font-size: 1.8rem;
   color: var(--primaryTextColor);
 }
 
@@ -257,7 +258,13 @@ body {
 	height: 100%;
 	width: 135%;
   }
+  @media only screen and (max-width: 600px) {
+	.footer-container a {
+		font-size: 1em;
+		padding: 0.5em 1.5em;
+	}
 
+  }
 
 
 /* header */
@@ -274,7 +281,6 @@ header{
 	margin: 10px;
 }
 nav {
-	text-align: center;
 	padding-top: 16px;
 	opacity: 0.75;
 	display: flex;
@@ -369,7 +375,7 @@ nav ul li a{
 	width: 52vw;
 	position: relative;
 	overflow-y: hidden;
-	height: 120%;
+	height: 100%;
 }
 
 @keyframes up-and-down {
@@ -397,8 +403,8 @@ nav ul li a{
   }
 .target{
 	position: absolute;
-	width: 16% !important;
-	top: 16%;
+	width: 18% !important;
+	top: 4%;
 	right: 21%;
 	animation: up-and-down 2s ease-in-out infinite;
 
@@ -412,15 +418,15 @@ nav ul li a{
 }
 .task{
 	position: absolute;
-	width: 30% !important;
-	top: 0%;
-	left: 22%;
+	width: 17% !important;
+	top: 8%;
+	left: 33%;
 	animation: up-and-down 2s ease-in-out infinite;
 }
 
 .ads{
 	position: absolute;
-	width: 50% !important;
+	width: 33% !important;
 	top: 41%;
 	left: 60%;
 	animation: up-and-down1 2s ease-in-out infinite;
@@ -429,10 +435,9 @@ nav ul li a{
 
 .rocket{
 	position: absolute;
-	position: absolute;
-	width: 40% !important;
-  top: 49%;
-  right: 48%;
+	width: 28% !important;
+	top: 49%;
+	right: 48%;
   }
 
 
@@ -460,6 +465,10 @@ nav ul li a{
 	width: 100%;
 	display: grid;
 	grid-template-columns: 60% 40%;
+}
+.paraG{
+	display: flex;
+    align-items: end;
 }
 .paraG p {
 	color: white;
@@ -624,6 +633,7 @@ nav ul li a{
 	color: transparent;
 	z-index: 1;
 	margin: 0 4rem;
+	height: fit-content;
 }
 .item {
  
@@ -656,9 +666,13 @@ nav ul li a{
 	.item, .working-ul p {
 		font-size: 1.5rem;
 		overflow-y: hidden;
-		text-align: start;
-		line-height: 1.3em;
+		
 
+
+	}
+	.working-ul p{
+		line-height: 1.3em;
+		margin: 0 2rem;
 	}
  }
 
@@ -686,6 +700,12 @@ nav ul li a{
   
   .panel.first{
 	flex-direction: column;
+  }
+
+  .panel.first h1{
+	font-family: "Belleza", sans-serif;
+	-webkit-text-stroke: 1px white;
+  color: transparent;
   }
  
   /* SCROLL DOWN */
@@ -826,6 +846,7 @@ nav ul li a{
 	width: 100%;
 	height: 100dvh;
 	color: white;
+	
   }
 .skills-container {
 
@@ -839,7 +860,6 @@ nav ul li a{
   
 	flex-direction: column;
   
-	justify-content: center;
   
 	width: 100%;
   
@@ -862,6 +882,9 @@ nav ul li a{
 	border-bottom: 4px solid #e53e3e;
   
 	margin: 0;
+	font-family: "Belleza", sans-serif;
+	-webkit-text-stroke: 1px white;
+  	color: transparent;
   
   }
   
@@ -941,6 +964,13 @@ nav ul li a{
 
   /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+	.skills-title{
+		font-size: 2rem;
+	}
+
+	.skills-description{
+		font-size: 1.4rem;
+	}
 	.skill-icon {
 		width: 40px;
 	}
@@ -1685,6 +1715,9 @@ nav ul li a{
 	display: inline;
 	border-bottom: 4px solid #e53e3e;
 	margin: 0;
+	font-family: "Belleza", sans-serif;
+	-webkit-text-stroke: 1px white;
+  	color: transparent;
   
   }
   
@@ -1805,6 +1838,9 @@ a:hover {
 @media (max-width: 767.98px) {
 	.work-title{
 		font-size: 2rem;
+	}
+	.work-description{
+		font-size: 1.4rem;
 	}
 	.featuredPropBox ul li{
 		width: 90%;
