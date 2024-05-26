@@ -7,8 +7,8 @@ function Footer() {
   return (
     <footer id="footer" className="footer">
       <div className="work-container">
-        <p className="work-title">What's next?</p>
-        <p className="work-description">//Let's contact, for the next step</p>
+        <p className="work-title">What&apos;s next?</p>
+        <p className="work-description">//Let&apos;s contact, for the next step</p>
       </div>
       <div class="footer-container">
         <a
