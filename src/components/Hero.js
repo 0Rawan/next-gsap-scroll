@@ -1,163 +1,113 @@
 import React, { useRef, useEffect } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 function Hero() {
-  const rocketRef = useRef(null);
-  const upRef = useRef(null);
-  const logoRef = useRef(null);
-  const paraGRef = useRef(null);
-  const boxRef = useRef(null);
-  const boxesRef = useRef([]);
-  const kamalRef = useRef([]);
-
   useGSAP(() => {
-    // const rocketanim = rocketAnimation();
-    const t1 = gsap.timeline();
-    t1.from(upRef.current, {
-      scale: 0,
-      x: 0,
-      duration: 2,
-    })
-      .from(boxesRef.current, {
-        duration: 1,
-        y: -400,
-        display: "inline-block",
-        skewX: 30,
-        stagger: 0.1,
-        onComplete: () => {
-          console.log("Stagger animation completed");
-        },
-      })
-      .from(kamalRef.current, {
-        y: 400,
-        display: "inline-block",
-        skewX: 30,
-        stagger: 0.1,
-        onComplete: () => {
-          console.log("Stagger animation completed");
-        },
-      })
-      .from(
-        paraGRef.current,
-        {
-          y: -150,
-          opacity: 0,
-        },
-        "-=0.3"
-      )
-      .from(
-        boxRef.current,
-        {
-          y: -150,
-          opacity: 0,
-        },
-        "-=0.3"
-      );
-    return () => {
-    
-    };
+    gsap.from(".loader-top, .loader-bottom", 2, {
+      delay: 1,
+      height: "50vh",
+      ease: "power4.inOut",
+    });
+
+    gsap.to(".marque", 3.5, {
+      delay: 0.75,
+      top: "50%",
+      ease: "power4.inOut",
+    });
+
+    gsap.from(".loader-top .marque, .loader-bottom .marque", 5, {
+      delay: 1,
+      left: "100%",
+      ease: "power3.inOut",
+    });
+
+    gsap.from(".clip-center .marque", 5, {
+      delay: 1,
+      left: "-50%",
+      ease: "power3.inOut",
+    });
+
+    gsap.to(".loader-top", 2, {
+      delay: 6,
+      clipPath: "inset(0 0 100% 0)",
+      ease: "power4.inOut",
+    });
+
+    gsap.to(".loader-bottom", 2, {
+      delay: 6,
+      clipPath: "inset(100% 0 0 0)",
+      ease: "power4.inOut",
+    });
+
+    gsap.to(
+      ".loader-top .marque, .loader-bottom .marque, .clip-center .marque span",
+      1,
+      {
+        delay: 6,
+        opacity: 0,
+        ease: "power2.inOut",
+      }
+    );
   }, []);
 
   return (
-    <div className="hero">
-      <header>
-        <div className="logo">
-          <div className="Lround" ref={boxRef}>
-          <img src="./img/Rawan-logo.png" className="logo" />
-
+   <>
+   <div className="loader">
+      <div className="loader-clip loader-top">
+        <div className="marque">
+          <div className="marque-container">
+            <span>Frontend</span>
+            <span>Frontend</span>
+            Developer
+            <span>Frontend</span>
+            <span>Frontend</span>
           </div>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="#Projects">Projects</a>
-            </li>
-            <li>
-              <a href="#footer">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-      <div className="container">
-        <div className="sideline">
-          <div className="line">
-            <div className="L lone">
-              <span></span>
-            </div>
-            <div className="L ltwo">
-              <span></span>
-            </div>
-            <div className="L lthree">
-              <span></span>
-            </div>
+      </div>
+      <div className="loader-clip loader-bottom">
+        <div className="marque">
+          <div className="marque-container">
+            <span>Backend</span>
+            <span>Backend</span>
+            Developer
+            <span>Backend</span>
+            <span>Backend</span>
           </div>
         </div>
-        <div className="heading">
-          <div className="up" ref={upRef}>
-            <img src="./img/1.png" className="laptop" />
-
-            <div className="Htag">
-              <img src="./img/10.png" className="target" alt="" />
-              <img src="./img/3.png" className="task" alt="" />
-              <img
-                src="./img/8.png"
-                className="rocket"
-                alt=""
-                ref={rocketRef}
-              />
-              <img src="./img/6.png" className="ads" alt="" />
-
-              <h1 className="h1">
-                {"Rawan".split("").map((_, index) => (
-                  <span
-                    key={index}
-                    className="box"
-                    ref={(el) => (boxesRef.current[index] = el)}
-                  >
-                    {"RAWAN".charAt(index)}
-                  </span>
-                ))}
-              </h1>
-              <h1 className="h2">
-                {"KAMAL".split("").map((_, index) => (
-                  <span
-                    key={index}
-                    className="box"
-                    ref={(el) => (kamalRef.current[index] = el)}
-                  >
-                    {"KAMAL".charAt(index)}
-                  </span>
-                ))}
-              </h1>
-            </div>
-          </div>
-          <div className="down">
-            <div className="social">
-              <div className="solink">
-                <ul>
-                  <li>
-                    <a href="https://github.com/0Rawan">Github</a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com/in/rawan-mustafa-087725140/">Linkedin</a>
-                  </li>
-                  <li>
-                    <a href="mailto:00rawan.kamal@gmail.com">Email</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="paraG" ref={paraGRef}>
-              <p>
-               Computer engineer focusing on web development, and I have experience with the React, Next Express js, and Laravel.
-              </p>
-            </div>
+      </div>
+      <div className="clip-center">
+        <div className="marque">
+          <div className="marque-container">
+            <span>Rawan</span>
+            <span>Rawan</span>
+            Rawan
+            <span>Rawan</span>
+            <span>Rawan</span>
           </div>
         </div>
       </div>
     </div>
+    <div className="hero-container">
+      <div className="nav">
+      <Image src="/img/Rawan-logo.png" width={50} height={50} />
+        <div className="nav-items">
+          <a href="#Projects">Projects</a>
+          <a href="#footer">Contact</a>
+          {/* <a href=""> Info </a> */}
+        </div>
+      </div>
+      <div className="footer">
+      <a href="https://github.com/0Rawan">Github</a>
+      <a href="https://www.linkedin.com/in/rawan-mustafa-087725140/">Linkedin</a>
+      <a href="mailto:00rawan.kamal@gmail.com">Email</a>
+      </div>
+    </div>
+   </>
   );
 }
 
 export default Hero;
+
+
+
