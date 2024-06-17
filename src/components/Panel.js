@@ -2,7 +2,6 @@ import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Hero from "./Hero";
-import WorkingLibraries from "./WorkingLibraries";
 import Education from "./Education";
 import Work from "./Work";
 import Skills from "./Skills";
@@ -11,9 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Panels() {
   const app = useRef();
-  const orangie = useRef();
-  const bluie = useRef();
-  const pinkie = useRef();
+
 
   useLayoutEffect(() => {
     // const ctx = gsap.context((self) => {
@@ -68,7 +65,6 @@ function Panels() {
         <div className="mouse"></div>
         <p className="text">Scroll</p>
       </section>
-      {/* <section className="panel animate-panel red">ONE</section> */}
       <section className="panel animate-panel skills">
         <Skills />
       </section>
