@@ -167,10 +167,8 @@ body {
   text-align: center;
   -webkit-text-stroke: 1px white;
   color: transparent;
-  margin: 0 4rem;
+  padding: 100px 4rem;
   overflow: hidden;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 .item {
   font-family: "Belleza", sans-serif;
@@ -195,11 +193,11 @@ body {
   pointer-events: none;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   .working-ul p {
     padding-top: 0;
   }
-}
+} */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .item,
@@ -209,7 +207,7 @@ body {
   }
   .working-ul p {
     line-height: 1.3em;
-    margin: 0 2rem;
+    padding: 100px 2rem;
   }
 }
 
@@ -424,7 +422,7 @@ body {
   margin-bottom: 10px;
   text-align: left;
   font-family: var(--quicksand);
-  color: var(--text-color);
+  color: rgb(204, 182, 182);
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -887,17 +885,6 @@ a:hover {
   background-image: url("../../public/assets/Antique.png");
 }
 
-.featuredPropBox ul li:nth-child(7) {
-  background-image: url("https://i.ibb.co/hLcmWbT/15646.jpg");
-}
-
-.featuredPropBox ul li:nth-child(8) {
-  background-image: url("https://i.ibb.co/89P5rTs/15678.jpg");
-}
-
-.featuredPropBox ul li:nth-child(9) {
-  background-image: url("https://i.ibb.co/RhZgpSG/20845.jpg");
-}
 
 .featuredPropBox ul li .fplogo {
   left: 50%;
@@ -928,6 +915,9 @@ a:hover {
   }
   .featuredPropBox ul li .fplogo {
     font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+  .featuredPropBox ul li .fptext p{
+	font-size: 0.75rem;
   }
 }
 
@@ -971,7 +961,7 @@ a:hover {
 }
 
 .featuredPropBox ul li:hover:after {
-  background-color: rgba(22, 22, 22, 0.3);
+  background-color: rgba(22, 22, 22, 0.8);
 }
 
 .featuredPropBox ul li:hover .fplogo {
