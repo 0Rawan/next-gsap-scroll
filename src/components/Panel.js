@@ -65,8 +65,8 @@ function Panels() {
     <div className="panels-container" ref={app}>
       <section className="panel first">
         <h1>Get to know me better</h1>
-        <div class="mouse"></div>
-        <p class="text">Scroll</p>
+        <div className="mouse"></div>
+        <p className="text">Scroll</p>
       </section>
       {/* <section className="panel animate-panel red">ONE</section> */}
       <section className="panel animate-panel skills">
